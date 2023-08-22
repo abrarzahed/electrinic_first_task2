@@ -90,6 +90,7 @@
     &-notification {
       @media (max-width: 900px) {
         margin-left: auto;
+        min-width: 30px;
       }
     }
 
@@ -97,10 +98,16 @@
       display: flex;
       gap: 0.5rem;
       align-items: center;
-      @media (max-width: 900px) {
-        display: none;
+      img {
+        @media (max-width: 900px) {
+          min-width: 30px;
+        }
       }
+
       &-details {
+        @media (max-width: 900px) {
+          display: none;
+        }
         h4 {
           color: $secondary-color;
         }

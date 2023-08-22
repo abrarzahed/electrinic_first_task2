@@ -8,6 +8,12 @@
   background: #fff;
   transition: 200ms linear;
   opacity: 0;
+  @media (max-width: 900px) {
+    gap: 3rem;
+    -webkit-box-shadow: 200px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 200px 0px 0px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 200px 0px 0px 0px rgba(0, 0, 0, 0.1);
+  }
   .sidebar-close {
     position: absolute;
     top: 0.5rem;
@@ -50,11 +56,12 @@
     column-gap: 2rem;
     justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
-    //  background: #000;
+
     &__item {
       display: grid;
       align-items: center;
       gap: 0.8rem;
+      position: relative;
 
       &:active,
       &:visited {
@@ -75,12 +82,19 @@
 
       &.first:nth-child(1) img {
         background: $primary-color;
+        &.overlap {
+          background: none;
+          position: absolute;
+          right: 13px;
+          top: -8px;
+        }
       }
     }
   }
 
   &-info {
     margin-top: -20px;
+
     h4 {
       color: $primary-color;
       font-size: 20px;
@@ -92,6 +106,9 @@
     p {
       margin-block: 0.8rem;
       font-size: 13px;
+      @media (max-width: 900px) {
+        font-size: 10px;
+      }
     }
     .bar {
       height: 8px;
@@ -115,6 +132,9 @@
 
   &-cta {
     margin-top: -20px;
+    @media (max-width: 900px) {
+      margin-top: -30px;
+    }
     button {
       background: $primary-color;
       color: #fff;

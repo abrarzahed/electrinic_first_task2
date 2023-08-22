@@ -27,6 +27,11 @@ input {
     outline: none;
   }
 }
+select {
+  &:focus {
+    outline: none;
+  }
+}
 img {
   max-width: 100%;
   object-fit: cover;
@@ -57,6 +62,7 @@ img {
 }
 
 @import "navbar";
+@import "mobilesearch";
 @import "sidebar";
 @import "mainoverview";
 @import "quickaccess";
