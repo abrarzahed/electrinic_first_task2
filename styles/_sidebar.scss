@@ -2,9 +2,27 @@
   padding: 1.5rem;
   border-right: 1px solid #f6f6f6;
   max-width: 250px;
-  min-height: 100vh;
+  // min-height: 100vh;
+  height: 100vh;
+  overflow-y: scroll;
   display: grid;
   gap: 4rem;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ff6e91;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+      inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
   &-items {
     display: grid;
     row-gap: 2rem;
@@ -16,13 +34,21 @@
       display: grid;
       align-items: center;
       gap: 0.8rem;
-      cursor: pointer;
+
+      &:active,
+      &:visited {
+        span {
+          font-weight: 700;
+        }
+      }
       img {
+        cursor: pointer;
         border-radius: 10px;
         background: #eceff7;
         padding: 0.5rem;
       }
       span {
+        cursor: pointer;
         font-size: 12px;
       }
 
