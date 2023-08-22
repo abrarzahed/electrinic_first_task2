@@ -1,32 +1,54 @@
 .sidebar {
-  padding: 1.5rem;
+  padding: 0;
   border-right: 1px solid #f6f6f6;
-  max-width: 250px;
-  // min-height: 100vh;
-  height: 100vh;
-  overflow-y: scroll;
+  width: 0px;
   display: grid;
+  align-content: flex-start;
   gap: 4rem;
+  background: #fff;
+  transition: 200ms linear;
+  opacity: 0;
+  @media (max-width: 900px) {
+    width: 250px;
+    overflow: scroll;
+    position: fixed;
+    left: 0;
+    z-index: 5;
+    transform: translateX(-100%);
 
-  &::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #ff6e91;
-    border-radius: 10px;
-    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
-      inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #84e8f4;
+      border-radius: 10px;
+      box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+        inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
   }
 
-  &::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  &.visible {
+    opacity: 1;
+    width: 250px;
+    padding: 1.5rem;
+    @media (max-width: 900px) {
+      height: 100vh;
+      width: 250px;
+      left: 0;
+      z-index: 5;
+      transform: translateX(0);
+    }
   }
 
   &-items {
     display: grid;
-    row-gap: 2rem;
-    column-gap: 2rem;
+    row-gap: 1.5rem;
+    column-gap: 5rem;
     justify-content: space-between;
     grid-template-columns: repeat(2, 1fr);
     //  background: #000;
@@ -60,7 +82,7 @@
 
   &-info {
     margin-top: 2rem;
-    display: grid;
+    // display: grid;
     gap: 0.6rem;
     h4 {
       color: $primary-color;
@@ -70,6 +92,7 @@
       }
     }
     p {
+      margin-block: 1rem;
       font-size: 13px;
     }
     .bar {
@@ -93,6 +116,8 @@
   }
 
   &-cta {
+    isolation: isolate;
+    align-self: flex-start;
     button {
       background: $primary-color;
       color: #fff;
@@ -115,7 +140,7 @@
         height: 100%;
         bottom: -10%;
         left: 5%;
-        z-index: -1;
+        z-index: -10;
         border-radius: 50px;
       }
     }
