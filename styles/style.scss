@@ -40,9 +40,26 @@ img {
   }
 }
 
+::-webkit-scrollbar {
+  width: 1em;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb {
+  background: #84e8f4;
+  height: 5px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 100vw;
+  border: 3px solid #fff;
+}
+
 @import "navbar";
 @import "sidebar";
 @import "mainoverview";
 @import "quickaccess";
 @import "recent";
 @import "rightbar";
+@import "sharedfolder";

@@ -1,8 +1,13 @@
 .sidebar-right {
-  background: #fafbfd;
   padding: 1.5rem;
-  max-width: 280px;
+  max-width: 350px;
   height: fit-content;
+  background: #fafbfd;
+  box-shadow: -0.6252529621124268px 0.23130746185779572px 6.49305534362793px 0px
+      rgba(199, 208, 255, 0.02),
+    -2.751113176345825px 1.0177528858184814px 13.44444465637207px 0px rgba(199, 208, 255, 0.04);
+  isolation: isolate;
+
   @media (max-width: 900px) {
     max-width: 100%;
     margin-top: 2rem;
@@ -16,5 +21,60 @@
   img {
     margin-top: 2rem;
     object-fit: contain;
+  }
+
+  &__fancy-card {
+    background: $primary-color;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 1rem;
+    flex: 2;
+    position: relative;
+    min-height: 140px;
+    margin-top: 2rem;
+    margin-left: -2.5rem;
+    position: relative;
+
+    @media (max-width: 900px) {
+      margin-left: 0;
+    }
+
+    &-left {
+      display: grid;
+      gap: 1rem;
+      flex-basis: 70%;
+      p {
+        color: #dee1e6;
+      }
+      button {
+        background: #84e8f4;
+        color: $primary-color;
+        padding: 0.8rem 2rem;
+        border-radius: 10px;
+        width: fit-content;
+        font-size: 14px;
+      }
+    }
+    &-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 130px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      border: 1px dashed #d0c9ff;
+      background: #f6f4ff;
+
+      bottom: -20px;
+      right: -20px;
+      z-index: -1;
+    }
   }
 }

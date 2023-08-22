@@ -1,0 +1,38 @@
+.shared-folder {
+  margin-top: 2rem;
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  &__items {
+    display: grid;
+    gap: 1.5rem;
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        img {
+          align-self: flex-start;
+          margin-top: -1px;
+          background: #dee1e6;
+          padding: 0.8rem;
+          border-radius: 10px;
+        }
+        p {
+          font-size: 12px;
+          font-weight: 600;
+        }
+        span {
+          font-size: 9px;
+        }
+      }
+      & > span {
+        font-size: 8px;
+      }
+    }
+  }
+}
