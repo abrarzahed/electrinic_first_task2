@@ -13,6 +13,9 @@ hr {
   background: #f6f6f6;
   border: none;
 }
+a {
+  text-decoration: none;
+}
 input {
   background: none;
   border: none;
@@ -21,4 +24,11 @@ input {
   }
 }
 
+.container {
+  max-width: 1280px;
+  margin-inline: auto;
+  //   padding: 1.5rem;
+}
+
 @import "navbar";
+@import "sidebar";
