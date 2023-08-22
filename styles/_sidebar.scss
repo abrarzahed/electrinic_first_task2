@@ -87,18 +87,19 @@
     gap: 0.6rem;
     h4 {
       color: $primary-color;
-      font-size: 22px;
+      font-size: 20px;
       span {
         font-weight: 400;
+        font-size: 18px;
       }
     }
     p {
-      margin-block: 1rem;
+      margin-block: 0.8rem;
       font-size: 13px;
     }
     .bar {
       height: 8px;
-      background: #f6f9ff;
+      background: #ecf1fa;
       border-radius: 50px;
       position: relative;
       overflow: hidden;
@@ -107,7 +108,7 @@
         content: "";
         position: absolute;
         height: 100%;
-        width: 79%;
+        width: 64%;
         top: 0;
         left: 0;
         background: #ff6e91;
