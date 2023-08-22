@@ -1,0 +1,82 @@
+.navbar {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin-inline: auto;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    .icon {
+      background: $primary-color;
+      color: #fff;
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-content: center;
+      border-radius: 50%;
+      font-weight: 600;
+    }
+    .text {
+      color: $primary-color;
+      font-weight: 600;
+    }
+  }
+  &__inputs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 2;
+
+    & > div {
+      border-radius: 10px;
+      border: 1px solid #f0f0f0;
+      padding: 0.8rem 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-search {
+      min-width: 300px;
+
+      input {
+        flex: 1;
+      }
+    }
+    &-filter {
+      justify-content: space-between;
+      min-width: 200px;
+
+      select {
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+
+    &-user {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      &-details {
+        h4 {
+          color: $secondary-color;
+        }
+        span {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
