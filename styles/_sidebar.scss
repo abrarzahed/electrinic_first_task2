@@ -21,6 +21,10 @@
     font-size: 28px;
     color: $primary-color;
     cursor: pointer;
+    display: none;
+    @media (max-width: 900px) {
+      display: unset;
+    }
   }
   @media (max-width: 900px) {
     width: 200px;
