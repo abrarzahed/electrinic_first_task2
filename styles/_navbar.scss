@@ -18,6 +18,7 @@
     align-items: center;
     gap: 1rem;
     flex: 1;
+
     i {
       font-size: 22px;
       color: $primary-color;
@@ -54,13 +55,13 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      @media (max-width: 900px) {
+        display: none;
+      }
     }
 
     &-search {
       min-width: 300px;
-      @media (max-width: 900px) {
-        min-width: auto;
-      }
 
       input {
         flex: 1;
@@ -85,6 +86,12 @@
     align-items: center;
     gap: 1.5rem;
     flex: 1;
+
+    &-notification {
+      @media (max-width: 900px) {
+        margin-left: auto;
+      }
+    }
 
     &-user {
       display: flex;

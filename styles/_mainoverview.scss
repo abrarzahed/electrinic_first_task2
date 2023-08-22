@@ -5,6 +5,10 @@
   display: grid;
   gap: 5rem;
 
+  @media (max-width: 900px) {
+    padding-right: 1.5rem;
+  }
+
   &-overview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
